@@ -27,6 +27,9 @@ osx:
 linux:
 	GOOS="linux" GOARCH="amd64" go build ${LDFLAGS} -o ${BINARY}-linux ./*.go
 
+armv7:
+	GOOS="linux" GOARCH="arm" GOARM="7" go build ${LDFLAGS} -o ${BINARY}-armv7 ./*.go
+
 windows:
 	GOOS="windows" GOARCH="amd64" go build ${LDFLAGS} -o ${BINARY}.exe ./*.go
 

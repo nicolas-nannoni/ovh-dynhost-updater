@@ -1,0 +1,13 @@
+[Unit]
+Description=OVH DynHost Updater
+
+[Service]
+Environment=USERNAME=example.org-test
+Environment=PASSWORD=your-password
+Environment=HOSTNAME=test.example.org
+ExecStart=/opt/tools/ovh-dynhost-updater --username $USERNAME \
+                                         --password $PASSWORD \
+                                         update-record $HOSTNAME
+
+[Install]
+WantedBy=multi-user.target

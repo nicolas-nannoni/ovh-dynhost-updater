@@ -73,7 +73,7 @@ func getIpAddress(c *cli.Context) string {
 		return getIpAddressOfInterface(iface)
 	}
 
-	log.Info("No interface or IP address specified: will use OVH autodection")
+	log.Info("No interface or IP address specified: will use OVH autodetection")
 	return ""
 }
 

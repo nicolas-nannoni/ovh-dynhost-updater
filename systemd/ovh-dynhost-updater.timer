@@ -1,0 +1,9 @@
+[Unit]
+Description=Run OVH DynHost Updater every 10 minutes and 1 minute after boot
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target
